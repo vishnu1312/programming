@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+void arrange(int n) {
+    int odd[10],even[10];
+    int oddcount = 0,evencount = 0;
+    
+    while(n != 0) {
+        int digit = n % 10;
+        if(digit % 2 != 0) {
+            odd[oddcount] = digit;
+            oddcount++;
+        }
+        else {
+            even[evencount] = digit;
+            evencount++;
+        }
+        n /= 10;
+    }
+    int result = 0;
+    for(int i = oddcount-1;i>=0;i--) {
+        result = result * 10 + odd[i];
+    }
+    for(int i = evencount-1;i>=0;i--) {
+        result = result * 10 + even[i];
+    }
+    
+    printf("Output Sequence:%d",result);
+}
+// Function to arrange the given number in odd sequence followed by even sequence
+// void arrangeOddEven(int inputNum) {
+//     int oddArr[10], evenArr[10];
+//     int oddCount = 0, evenCount = 0;
+
+//     // Separate odd and even digits
+//     while (inputNum != 0) {
+//         int digit = inputNum % 10;
+//         if (digit % 2 != 0) {
+//             oddArr[oddCount] = digit;
+//             oddCount++;
+//         } else {
+//             evenArr[evenCount] = digit;
+//             evenCount++;
+//         }
+//         inputNum = inputNum / 10;
+//     }
+
+//     // Reassemble the numbers in the required sequence
+//     int result = 0;
+//     for (int i = oddCount - 1; i >= 0; i--) {
+//         result = result * 10 + oddArr[i];
+//     }
+//     for (int i = evenCount - 1; i >= 0; i--) {
+//         result = result * 10 + evenArr[i];
+//     }
+
+//     printf("Output: %d\n", result);
+// }
+
+int main() {
+    int inputNum;
+    printf("Enter Number:");
+    scanf("%d",&inputNum);
+    // Call the function to arrange the number in odd sequence followed by even sequence
+    arrange(inputNum);
+
+}
