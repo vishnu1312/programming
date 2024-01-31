@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+
+bool stepping_number(int n) {
+    int previous  = -1;
+    while(n > 0) {
+        int current = n % 10;
+        if (previous == -1) {
+            previous = current;
+        }
+        else {
+            if(abs(current - previous) != 1)
+               return false;
+        }
+        previous = current;
+        n /= 10;
+    }
+    return true;
+}
+
+int main() {
+    int a;
+    printf("Enter Number:");
+    scanf("%d",&a);
+    // bool result = stepping_number(a);
+    if (stepping_number(a) == true)
+       printf("%d is a stepping number",a);
+       else 
+       printf("%d is not a stepping number",a);
+}
+
