@@ -1,0 +1,18 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("Enter number of vehicles and wheels:");
+    int vehicles,wheels;
+    scanf("%d%d",&vehicles,&wheels);
+    
+    for(int i=0;i<=vehicles;i++) {
+        if((i*2) + (vehicles-i)*4 == wheels) {
+            printf("The two wheeler vehicles are : %d and 4 wheeler vehicles are : %d",i,vehicles-i);
+        }
+    }
+    
+    
+    return 0;
+}
