@@ -1,0 +1,59 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+// int main() {
+//     // Write C code here
+//     static int v = 5;
+//     printf("%d",v--);
+//     if(v)
+//       main();
+
+//     return 0;
+// }
+
+// int main() {
+//     int a,*ptr;
+//     a = 10;
+//     ptr = &a;
+//     printf("%d",a);
+//     printf("%d",&a);
+//     printf("%d",ptr);
+//     printf("%d",&ptr);
+//     printf("%d",*ptr);
+// }
+
+// int main() {
+//     int a[] = {1,2,3};
+//     for(int i=0;i<3;i++)   
+//       printf("\n%d %d %d %d",a[i],i[a],*(a+i),*(i+a));
+// }
+
+// int main() {
+//     int a[] = {1,2,3};
+//     int t = a;
+//     printf("\n%d",t);
+//     printf("\n%d",&a[0]);
+// }
+
+// abs(), ceil(), floor() function
+// int main() {
+//     printf("\naddition:%d",abs(-123.45));
+//     printf("\nCeil:%2f",ceil(123.45));
+//     printf("\nFloor:%f",floor(123.45));
+// }
+
+// string functions
+int main() {
+    char s1[] = "Saveetha";
+    char s2[] = "Saveetha";
+    char s3[] = "";
+    strcpy(s3,s1);
+    printf("\n%d",strcmp(s1,s2));
+    printf("\n%d",strlen(s1));
+    printf("\n%s",s3);
+}
+
+// int main() {
+//     char ch;
+// }
+
